@@ -165,7 +165,4 @@ Code LLama 7B requires decent hardware. Consider:
 - Using a smaller model
 - Running on GPU if available
 - Using mock mode for UI testing
-
-## 📝 License
-
-MIT - Use freely for learning and projects!
+ 
