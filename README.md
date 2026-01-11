@@ -2,6 +2,8 @@
 
 A browser-based, self-improving coding agent that uses local LLM inference (Ollama) to autonomously generate, test, and refine code through an agentic loop.
 
+![Overview](./unnamed9.png)
+
 > **Current Phase: 1 - Hello Ollama**  
 > Basic LLM integration with health checks, logging, and simple UI.
 
