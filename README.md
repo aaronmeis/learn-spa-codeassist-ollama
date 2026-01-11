@@ -9,7 +9,7 @@ A browser-based learning project that demonstrates how to build an autonomous co
 > **Current Phase: 1 - Hello Ollama**  
 > Basic LLM integration with health checks, logging, real-time streaming, and interactive UI.
 
-> **🌐 Landing Page:** Check out [index.html](./index.html) for an overview and demo!
+> **🌐 Landing Page:** Check out [index.html](https://aaronmeis.github.io/learn-spa-codeassist-ollama/) for an overview and demo!
 
 ## What It Does
 
