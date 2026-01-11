@@ -1,0 +1,289 @@
+/* App.css - Main Application Styles */
+
+/* Animations */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* App Container */
+.app {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.app-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.app-title-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.app-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #eaeaea;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.app-subtitle {
+  color: #6b7280;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.phase-badge {
+  padding: 2px 8px;
+  background-color: rgba(233, 69, 96, 0.2);
+  color: #e94560;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Main Layout */
+.main-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 900px) {
+  .main-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Sections */
+.input-section,
+.output-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Section Cards */
+.section-card {
+  background-color: #16213e;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #2a2a4a;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #eaeaea;
+  margin: 0 0 16px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Mock Mode Banner */
+.mock-banner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background-color: rgba(251, 191, 36, 0.1);
+  border: 1px solid rgba(251, 191, 36, 0.3);
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.mock-banner-icon {
+  font-size: 18px;
+}
+
+.mock-banner-text {
+  color: #fbbf24;
+  font-size: 13px;
+  flex: 1;
+}
+
+.mock-banner-button {
+  padding: 4px 12px;
+  background-color: transparent;
+  border: 1px solid #fbbf24;
+  border-radius: 4px;
+  color: #fbbf24;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* Status Bar */
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background-color: #16213e;
+  border-radius: 8px;
+  border: 1px solid #2a2a4a;
+  margin-top: 24px;
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #a0a0a0;
+  font-size: 13px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.status-dot.connected {
+  background-color: #4ade80;
+}
+
+.status-dot.disconnected {
+  background-color: #ef4444;
+}
+
+.status-dot.loading {
+  background-color: #fbbf24;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Button Styles */
+.btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+
+.btn-primary {
+  background-color: #e94560;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #d63d56;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #a0a0a0;
+  border: 1px solid #2a2a4a;
+}
+
+.btn-secondary:hover {
+  border-color: #a0a0a0;
+  color: #eaeaea;
+}
+
+/* Hover effects */
+button:hover {
+  opacity: 0.9;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Textarea focus */
+textarea:focus {
+  border-color: #e94560;
+}
+
+/* Code highlighting */
+code {
+  background-color: #0d1117;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* Scrollbar for code blocks */
+pre::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+pre::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+pre::-webkit-scrollbar-thumb {
+  background: #2a2a4a;
+  border-radius: 3px;
+}
+
+/* Loading spinner animation class */
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+/* Fade in animation class */
+.fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Example item hover */
+.example-item:hover {
+  background-color: rgba(233, 69, 96, 0.1);
+}
+
+/* Action button hover */
+.action-button:hover {
+  background-color: #2a2a4a;
+  color: #eaeaea;
+}
+
+/* Footer */
+.app-footer {
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 13px;
+  border-top: 1px solid #2a2a4a;
+}
+
+.app-footer a {
+  color: #e94560;
+  text-decoration: none;
+}
+
+.app-footer a:hover {
+  text-decoration: underline;
+}
